@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import List from './list';
 import Participant from './participant'
-import ParticipantSample from './participantsample'
+import STORE from './store'
 
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App participants />, document.getElementById('root'));
+ReactDOM.render(<App store={STORE} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

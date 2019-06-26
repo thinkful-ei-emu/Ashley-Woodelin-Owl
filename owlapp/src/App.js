@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import List from './list'
 
 
-function App(props) {
+class App extends Component {
+
+  static defaultProps = {
+    store: {
+      participants: [],
+      chatEvents: [],
+    }
+  };
+
+  render(){
+
+    return (
+      <main className="App">
+        <header className="App-header">
+          <h1>Participants:</h1>          
+        </header>
+        <div className="App-list">
+          <List />
+        
+            
+
+        </div>
+        
+       
+      </main>
+    );
+
+  }
 
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Participants</h1>          
-      </header>
-      
-     
-    </div>
-  );
+ 
 }
 
 export default App;
